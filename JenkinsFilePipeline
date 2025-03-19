@@ -18,13 +18,13 @@ pipeline{
 
          stage('Testing'){
             steps{
-            sh 'firebase deploy -P devops8testing-fdc3e --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P devops8testing --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
         stage('Staging'){
             steps{
-            sh 'firebase deploy -P devops8staging-94ffb --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P devops8staging --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
