@@ -18,19 +18,19 @@ pipeline{
 
          stage('Testing'){
             steps{
-            echo 'This is testing'
+            sh 'firebase deploy -P devops8testing-fdc3e --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
         stage('Staging'){
             steps{
-            sh 'firebase deploy -P password-generator-staging --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P devops8staging-94ffb --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
         stage('Production'){
             steps{
-            sh 'firebase deploy -P password-generator-production --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P devops8production --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
     }
